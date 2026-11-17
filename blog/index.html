@@ -1,0 +1,11 @@
+---
+title: Devlog
+kicker: Blog
+lede: "Notes from making games, apps and videos."
+description: "The Tylerlikesps4 devlog: Harrow's Wake, Last Toll, Godot, game jams and local AI."
+wide: true
+---
+<p class="blog-links"><a href="{{ '/blog/tags/' | relative_url }}">Browse by tag</a> &middot; <a href="{{ '/feed.xml' | relative_url }}">{% include icon.html name="rss" %} RSS feed</a></p>
+<div class="stack">
+  {%- for post in site.posts %}{% include post-card.html post=post %}{% endfor %}
+</div>

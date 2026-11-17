@@ -1,0 +1,11 @@
+# Main menu, in order. `url` must match the page's permalink.
+- { title: Home,    url: / }
+- { title: Games,   url: /games/ }
+- { title: Apps,    url: /apps/ }
+- { title: Blog,    url: /blog/ }
+- { title: Videos,  url: /videos/ }
+- { title: About,   url: /about/ }
+- { title: Now,     url: /now/ }
+- { title: Uses,    url: /uses/ }
+- { title: Links,   url: /links/ }
+- { title: Contact, url: /contact/ }

@@ -1,24 +1,67 @@
-<!doctype html>
-<html lang="en">
+---
+layout: default
+title: Horror games, apps, devlogs and streams
+body_class: home
+description: "Anu (Tylerlikesps4) makes PS1-style survival horror games in Godot, small open-source Android apps, devlogs, YouTube videos and Twitch streams."
+---
+{%- assign featured = site.games | where: "featured", true | first -%}
+<section class="hero">
+  <img class="hero-bg" src="{{ '/assets/img/harrows-wake/bellman-mask.webp' | relative_url }}" alt="" fetchpriority="high">
+  <div class="wrap hero-inner">
+    <p class="kicker">{% include icon.html name="bell" %} Tylerlikesps4 &middot; Anu</p>
+    <h1>You'll hear the bell <em>before</em> you see him.</h1>
+    <p class="lede">I make PS1-style survival horror games in Godot, small open-source Android apps, and videos and streams about making them.</p>
+    <p class="actions">
+      <a class="btn btn-primary" href="{{ featured.url | relative_url }}">Play {{ featured.title }}</a>
+      <a class="btn" href="{{ '/blog/' | relative_url }}">Read the devlog</a>
+    </p>
+    <ul class="hero-links" aria-label="Find me on">
+      {%- for l in site.data.links %}{% if l.featured %}
+      <li><a href="{{ l.url }}">{% include icon.html name=l.icon %}<span>{{ l.name }}</span></a></li>
+      {%- endif %}{% endfor %}
+    </ul>
+  </div>
+</section>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Anu, The Sky Father</title>    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  </head>
+<section class="wrap section" aria-labelledby="featured-h">
+  <div class="section-head">
+    <h2 id="featured-h">Featured game</h2>
+    <a class="more" href="{{ '/games/' | relative_url }}">All games {% include icon.html name="arrow" %}</a>
+  </div>
+  <article class="feature">
+    <a class="feature-img" href="{{ featured.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ featured.hero | relative_url }}" alt="" loading="lazy" width="1280" height="960"></a>
+    <div class="feature-body">
+      <p class="meta">{{ featured.kind }} &middot; {{ featured.status }}</p>
+      <h3><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h3>
+      <p>{{ featured.summary }}</p>
+      <p class="actions">{% for b in featured.play limit: 2 %}<a class="btn{% if forloop.first %} btn-primary{% endif %}" href="{{ b.url }}">{{ b.label }}</a>{% endfor %}</p>
+    </div>
+  </article>
+</section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-  </body>
+<section class="wrap section" aria-labelledby="posts-h">
+  <div class="section-head">
+    <h2 id="posts-h">Latest from the devlog</h2>
+    <a class="more" href="{{ '/blog/' | relative_url }}">All posts {% include icon.html name="arrow" %}</a>
+  </div>
+  <div class="grid grid-3">
+    {%- for post in site.posts limit: 3 %}{% include post-card.html post=post %}{% endfor %}
+  </div>
+</section>
 
-</html>
+<section class="wrap section" aria-labelledby="watch-h">
+  <div class="section-head">
+    <h2 id="watch-h">Watch</h2>
+    <a class="more" href="{{ '/videos/' | relative_url }}">Videos &amp; streams {% include icon.html name="arrow" %}</a>
+  </div>
+  <div class="grid grid-2">
+    <a class="card channel" href="https://www.youtube.com/@godkingdarkness0115">
+      {% include icon.html name="youtube" %}
+      <span><strong>YouTube</strong><br>New videos {% for s in site.data.schedule.youtube %}{{ s.day | slice: 0, 3 }}{% unless forloop.last %} &middot; {% endunless %}{% endfor %}</span>
+    </a>
+    <a class="card channel" href="https://www.twitch.tv/tylerlikesps4">
+      {% include icon.html name="twitch" %}
+      <span><strong>Twitch</strong><br>Live streams &middot; tylerlikesps4</span>
+    </a>
+  </div>
+</section>

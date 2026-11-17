@@ -1,0 +1,21 @@
+---
+layout: default
+title: Links
+permalink: /links/
+description: "All Tylerlikesps4 links: YouTube, Twitch, GitHub, itch.io and the games."
+body_class: links-page
+---
+<div class="wrap linkbio">
+  <img class="avatar" src="{{ '/assets/img/icon.svg' | relative_url }}" alt="" width="88" height="88">
+  <h1>Anu <span>&middot; Tylerlikesps4</span></h1>
+  <p class="lede">Horror games, apps, videos and streams.</p>
+  <ul class="linkbio-list">
+    {%- for g in site.games %}
+    <li><a href="{{ g.url | relative_url }}">{% include icon.html name="bell" %}<span><strong>{{ g.title }}</strong><small>{{ g.kind }}</small></span></a></li>
+    {%- endfor %}
+    {%- for l in site.data.links %}
+    <li><a href="{{ l.url | relative_url }}">{% include icon.html name=l.icon %}<span><strong>{{ l.name }}</strong><small>{{ l.note }}</small></span></a></li>
+    {%- endfor %}
+    <li><a href="{{ '/blog/' | relative_url }}">{% include icon.html name="arrow" %}<span><strong>Devlog</strong><small>Posts about making things</small></span></a></li>
+  </ul>
+</div>

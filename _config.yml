@@ -1,0 +1,66 @@
+# Site settings. Restart `bundle exec jekyll serve` after editing this file.
+title: Tylerlikesps4
+tagline: PS1-style horror games, little apps, devlogs and streams
+description: >-
+  Anu (Tylerlikesps4) makes PS1-style survival horror games in Godot, small
+  open-source Android apps, devlogs, YouTube videos and Twitch streams.
+url: "https://tylerlikesps4.github.io"
+baseurl: ""
+lang: en
+timezone: America/New_York
+
+author:
+  name: Anu
+  url: "https://tylerlikesps4.github.io/about/"
+
+# Used by jekyll-seo-tag for the social card and the "sameAs" profile links.
+image: /assets/img/og-card.jpg
+logo: /assets/img/icon.svg
+social:
+  name: Tylerlikesps4
+  links:
+    - https://www.youtube.com/@godkingdarkness0115
+    - https://www.twitch.tv/tylerlikesps4
+    - https://github.com/Tylerlikesps4
+    - https://merlin-direwolves.itch.io
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+permalink: /blog/:year/:month/:day/:title/
+
+collections:
+  games:
+    output: true
+    permalink: /games/:name/
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "", type: games }
+    values: { layout: game }
+  - scope: { path: "" }
+    values: { layout: page }
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    disable: true
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - home.png
+  - tools
+excerpt_separator: "<!--more-->"

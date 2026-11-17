@@ -1,0 +1,17 @@
+---
+layout: default
+title: Page not found
+permalink: /404.html
+sitemap: false
+body_class: not-found
+---
+<div class="wrap lost">
+  <p class="kicker">{% include icon.html name="bell" %} Error 404</p>
+  <h1>The bell tolls for a page that isn't here.</h1>
+  <p class="lede">You took a wrong turn in the fog. The page may have moved, or it never existed. Don't run. Running is loud.</p>
+  <p class="actions">
+    <a class="btn btn-primary" href="{{ '/' | relative_url }}">Back to safety</a>
+    <a class="btn" href="{{ '/games/' | relative_url }}">Games</a>
+    <a class="btn" href="{{ '/blog/' | relative_url }}">Devlog</a>
+  </p>
+</div>

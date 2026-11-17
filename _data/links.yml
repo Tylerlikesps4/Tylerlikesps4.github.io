@@ -1,0 +1,33 @@
+# Social and project links. Used by the home page, the Links page, Contact and the footer.
+# icon: one of youtube, twitch, github, itch, rss (see _includes/icon.html)
+# featured: true shows the link in the home page hero and the footer.
+- name: YouTube
+  handle: "@godkingdarkness0115"
+  url: https://www.youtube.com/@godkingdarkness0115
+  icon: youtube
+  note: Videos on Mondays, Wednesdays and Fridays
+  featured: true
+- name: Twitch
+  handle: tylerlikesps4
+  url: https://www.twitch.tv/tylerlikesps4
+  icon: twitch
+  note: Live streams and chat
+  featured: true
+- name: GitHub
+  handle: Tylerlikesps4
+  url: https://github.com/Tylerlikesps4
+  icon: github
+  note: Source code for the games and apps
+  featured: true
+- name: itch.io
+  handle: Merlin
+  url: https://merlin-direwolves.itch.io
+  icon: itch
+  note: Play the games in your browser or download them
+  featured: true
+- name: Devlog RSS
+  handle: feed.xml
+  url: /feed.xml
+  icon: rss
+  note: New posts in your feed reader
+  featured: false

@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<article class="game-page">
+  <header class="game-hero">
+    <img class="game-hero-bg" src="{{ page.hero | default: page.cover | relative_url }}" alt="">
+    <div class="wrap game-hero-inner">
+      <p class="kicker"><a href="{{ '/games/' | relative_url }}">Games</a> &middot; {{ page.kind }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="lede">{{ page.summary }}</p>
+      <p class="actions">
+        {% for b in page.play %}<a class="btn{% if forloop.first %} btn-primary{% endif %}" href="{{ b.url }}">{{ b.label }}</a>{% endfor %}
+      </p>
+    </div>
+  </header>
+
+  <div class="wrap game-layout">
+    <div class="prose">
+{{ content }}
+    </div>
+    <aside class="facts" aria-label="Game facts">
+      <h2 class="visually-hidden">Facts</h2>
+      <dl>
+        {% for f in page.facts %}<div><dt>{{ f.label }}</dt><dd>{{ f.value | markdownify | remove: '<p>' | remove: '</p>' | strip }}</dd></div>{% endfor %}
+      </dl>
+    </aside>
+  </div>
+
+  {% if page.screenshots %}
+  <section class="wrap" aria-labelledby="shots-h">
+    <h2 id="shots-h">Screenshots</h2>
+    <ul class="gallery">
+      {% for s in page.screenshots %}
+      <li><figure><a href="{{ s.src | relative_url }}"><img src="{{ s.src | relative_url }}" alt="{{ s.alt }}" loading="lazy" decoding="async" width="{{ s.w | default: 1280 }}" height="{{ s.h | default: 960 }}"></a><figcaption>{{ s.alt }}</figcaption></figure></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+</article>

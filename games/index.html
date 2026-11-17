@@ -1,0 +1,12 @@
+---
+title: Games
+kicker: Games
+lede: "PS1-style horror made in Godot. Free to play, open source, and built in public."
+description: "Harrow's Wake and Last Toll, PS1-style horror games by Tylerlikesps4, made in Godot."
+wide: true
+---
+<div class="grid grid-2 games-grid">
+  {%- assign games = site.games | sort: "order" %}
+  {%- for g in games %}{% include game-card.html game=g %}{% endfor %}
+</div>
+<p>Everything I publish is also on <a href="https://merlin-direwolves.itch.io">itch.io</a>.</p>

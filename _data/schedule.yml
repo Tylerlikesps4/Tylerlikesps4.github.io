@@ -1,0 +1,10 @@
+# Upload and stream schedule shown on the Videos page and the home page.
+# Leave `time` empty if there is no fixed time.
+youtube:
+  - { day: Monday,    what: New video, time: "" }
+  - { day: Wednesday, what: New video, time: "" }
+  - { day: Friday,    what: New video, time: "" }
+twitch:
+  # No fixed stream times yet. Add entries like the ones above when there are.
+  note: "No fixed stream times yet. Follow on Twitch to get a notification when I go live."
+  slots: []

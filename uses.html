@@ -1,0 +1,14 @@
+---
+title: Uses
+kicker: Setup
+permalink: /uses/
+lede: "The hardware and software I make games, apps and videos with."
+description: "The hardware and software Tylerlikesps4 uses: an RTX 4060 PC, Godot and Ollama."
+---
+{%- for s in site.data.uses %}
+<h2>{{ s.section }}</h2>
+<dl class="uses">
+  {%- for i in s.items %}<div><dt>{{ i.name }}</dt><dd>{{ i.detail }}</dd></div>{% endfor %}
+</dl>
+{%- endfor %}
+<p class="small">Inspired by <a href="https://uses.tech">uses.tech</a>.</p>

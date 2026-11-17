@@ -1,0 +1,8 @@
+# Videos to feature on the Videos page, newest first. Leave the list empty to hide the section.
+# youtube_id is the part after "watch?v=" in the video's URL.
+# Example:
+# - title: "Harrow's Wake devlog #1"
+#   youtube_id: dQw4w9WgXcQ
+#   date: 2026-11-20
+#   description: One line about the video.
+[]

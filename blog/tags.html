@@ -1,0 +1,21 @@
+---
+title: Tags
+kicker: Blog
+permalink: /blog/tags/
+description: "Devlog posts by tag."
+wide: true
+---
+{%- assign tags = site.tags | sort %}
+<ul class="tag-cloud">
+  {%- for t in tags %}<li><a href="#{{ t[0] | slugify }}">#{{ t[0] }} <span>{{ t[1].size }}</span></a></li>{% endfor %}
+</ul>
+{%- for t in tags %}
+<section class="tag-section" id="{{ t[0] | slugify }}" aria-labelledby="h-{{ t[0] | slugify }}">
+  <h2 id="h-{{ t[0] | slugify }}">#{{ t[0] }}</h2>
+  <ul class="post-list">
+    {%- for post in t[1] %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time></li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endfor %}

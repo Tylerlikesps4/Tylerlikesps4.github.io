@@ -1,0 +1,46 @@
+# Apps & tools shown on the Apps page (games live in the _games folder instead).
+# status: shown as a badge. repo/download/site are optional; leave them out to hide the button.
+- name: Anu Studio Crew
+  slug: studio-crew
+  status: Coming soon
+  kind: Android app
+  summary: >-
+    A crew of six AI helpers for running a YouTube and Twitch channel: Scout finds ideas,
+    Writer drafts hooks, titles and scripts, Clipper picks clip moments from your notes,
+    Mod drafts chat rules, Analyst reads your public stats, and Scheduler keeps a local
+    content calendar with reminders.
+  details:
+    - Runs the AI on your own PC with Ollama (default model qwen3:8b, which fits an 8 GB RTX 4060), with free OpenRouter models as a fallback.
+    - No accounts, no analytics, no telemetry.
+    - Expo SDK 54 + React Native, TypeScript.
+  license: GPL-3.0-or-later
+  note: In private testing. Not released yet.
+
+- name: Anu Keystone
+  slug: keystone
+  status: Early release
+  kind: Android app
+  summary: >-
+    Your whole life in one private, offline app. Tasks, habits, money, goals and more,
+    organised like a Notion-style life OS, with list, board, calendar, gallery, table and stats views.
+  details:
+    - Kotlin + Jetpack Compose (Material 3), local SQLite, no account needed.
+    - Latest stable build v0.02 adds Check for updates. v0.03 and v0.04 are test builds (app lock, and a DNS firewall) marked pre-release.
+  license: GPL-3.0-or-later
+  repo: https://github.com/Tylerlikesps4/Anu-Keystone
+  download: https://github.com/Tylerlikesps4/Anu-Keystone/releases/latest
+
+- name: Pocketly
+  slug: pocketly
+  status: Early release
+  kind: Android app
+  summary: >-
+    A personal budget app. Track income and expenses, set monthly budgets by category,
+    see charts, trends and plain-English insights, manage recurring bills, scan receipts
+    and import or export CSV. Your records stay on your device, with no bank connection.
+  details:
+    - Expo Router + React Native, TypeScript, NativeWind. Made with Manus.
+    - v0.01 APK on GitHub Releases.
+  license: MIT
+  repo: https://github.com/Tylerlikesps4/Pocketly---Your-personal-budget
+  download: https://github.com/Tylerlikesps4/Pocketly---Your-personal-budget/releases/latest

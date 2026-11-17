@@ -1,0 +1,22 @@
+# The Uses page. Hardware and software only.
+- section: Hardware
+  items:
+    - { name: Desktop PC, detail: "NVIDIA GeForce RTX 4060 (8 GB VRAM), 16 GB RAM. Builds, recording, and the local AI server." }
+    - { name: Laptop, detail: "Intel Core i3-1215U with integrated graphics, 24 GB RAM. My low-end test machine: if a browser build runs here, it runs most places." }
+    - { name: Android phone, detail: "Where I play-test the Android builds of the games and apps." }
+- section: Game development
+  items:
+    - { name: Godot 4.3, detail: "Both games. Harrow's Wake uses the .NET edition (C# + GDScript); Last Toll is plain GDScript so it can export to the web." }
+    - { name: PSX shaders, detail: "Vertex snapping, affine texture warping, 15-bit dither, CRT and film grain, written for Harrow's Wake." }
+    - { name: CC0 assets, detail: "Quaternius mannequins, Kenney furniture and graveyard kits, Poly Haven textures, and CC0 sounds from OpenGameArt." }
+    - { name: GitHub Actions, detail: "Every push builds Windows, Linux, Android (and web for Last Toll) and publishes a release." }
+- section: Music and sound
+  items:
+    - { name: Python + NumPy/SciPy, detail: "Procedural music and sound: the Harrow's Wake main theme and the Last Toll music box." }
+    - { name: FluidSynth + FluidR3_GM, detail: "Rendering the orchestral parts of the main theme." }
+    - { name: FFmpeg, detail: "Loudness normalisation and encoding." }
+- section: AI and apps
+  items:
+    - { name: Ollama, detail: "Local models on the RTX 4060 (qwen3:8b) for Anu Studio Crew, over my home network." }
+    - { name: Expo + React Native, detail: "Anu Studio Crew and Pocketly." }
+    - { name: Kotlin + Jetpack Compose, detail: "Anu Keystone." }

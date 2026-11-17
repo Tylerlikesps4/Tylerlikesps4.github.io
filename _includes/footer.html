@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <ul class="social" aria-label="Elsewhere">
+      {%- for l in site.data.links %}
+      <li><a href="{{ l.url | relative_url }}">{% include icon.html name=l.icon %}<span>{{ l.name }}</span></a></li>
+      {%- endfor %}
+    </ul>
+    <p class="fine">
+      &copy; {{ site.time | date: "%Y" }} Tylerlikesps4. No trackers, no analytics, no cookies.
+      Site code GPL-3.0 &middot; <a href="https://github.com/Tylerlikesps4/Tylerlikesps4.github.io">source</a>.
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,27 @@
+---
+title: Apps & tools
+kicker: Apps & tools
+lede: "Small Android apps I build for my own life and channels. Open source, offline-first, no tracking."
+description: "Android apps by Tylerlikesps4: Anu Studio Crew, Anu Keystone and Pocketly."
+wide: true
+---
+<div class="stack">
+{%- for p in site.data.projects %}
+<article class="card app-card" id="{{ p.slug }}">
+  <div class="app-head">
+    <h2>{{ p.name }}</h2>
+    <span class="badge{% if p.status == 'Coming soon' %} badge-soon{% endif %}">{{ p.status }}</span>
+  </div>
+  <p class="meta">{{ p.kind }} &middot; {{ p.license }}</p>
+  <p>{{ p.summary }}</p>
+  {% if p.details %}<ul>{% for d in p.details %}<li>{{ d }}</li>{% endfor %}</ul>{% endif %}
+  {% if p.note %}<p class="note">{{ p.note }}</p>{% endif %}
+  {% if p.repo or p.download %}
+  <p class="actions">
+    {% if p.download %}<a class="btn btn-primary" href="{{ p.download }}">Download APK</a>{% endif %}
+    {% if p.repo %}<a class="btn" href="{{ p.repo }}">{% include icon.html name="github" %} Source</a>{% endif %}
+  </p>
+  {% endif %}
+</article>
+{%- endfor %}
+</div>

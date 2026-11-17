@@ -1,0 +1,63 @@
+---
+title: Videos & streams
+kicker: Watch
+permalink: /videos/
+wide: true
+lede: "Game dev, horror games and whatever I'm building, on YouTube and live on Twitch."
+description: "The Tylerlikesps4 YouTube upload schedule and Twitch streams."
+---
+<div class="grid grid-2">
+  <section class="card" aria-labelledby="yt-h">
+    <h2 id="yt-h">{% include icon.html name="youtube" %} YouTube</h2>
+    <p>New videos go up on:</p>
+    <ul class="schedule">
+      {%- for s in site.data.schedule.youtube %}
+      <li><strong>{{ s.day }}</strong> <span>{{ s.what }}{% if s.time != "" %} &middot; {{ s.time }}{% endif %}</span></li>
+      {%- endfor %}
+    </ul>
+    <p><a class="btn btn-primary" href="https://www.youtube.com/@godkingdarkness0115">Open the channel</a></p>
+  </section>
+  <section class="card" aria-labelledby="tw-sched-h">
+    <h2 id="tw-sched-h">{% include icon.html name="twitch" %} Twitch</h2>
+    {% if site.data.schedule.twitch.slots.size > 0 %}
+    <ul class="schedule">
+      {%- for s in site.data.schedule.twitch.slots %}<li><strong>{{ s.day }}</strong> <span>{{ s.what }}{% if s.time != "" %} &middot; {{ s.time }}{% endif %}</span></li>{% endfor %}
+    </ul>
+    {% endif %}
+    <p>{{ site.data.schedule.twitch.note }}</p>
+    <p><a class="btn btn-primary" href="https://www.twitch.tv/tylerlikesps4">Follow on Twitch</a></p>
+  </section>
+</div>
+
+<section class="section" aria-labelledby="live-h">
+  <h2 id="live-h">Live on Twitch</h2>
+  <div class="embed" data-embed
+       data-src="https://player.twitch.tv/?channel=tylerlikesps4&amp;parent=tylerlikesps4.github.io&amp;muted=true&amp;autoplay=false"
+       data-title="Twitch stream player for tylerlikesps4">
+    <div class="embed-facade">
+      <p>The player loads from Twitch, which sets its own cookies. It only loads if you ask.</p>
+      <button class="btn btn-primary" type="button" data-embed-load>{% include icon.html name="twitch" %} Load the Twitch player</button>
+      <p class="small">Or watch at <a href="https://www.twitch.tv/tylerlikesps4">twitch.tv/tylerlikesps4</a>.</p>
+    </div>
+  </div>
+</section>
+
+{% if site.data.videos.size > 0 %}
+<section class="section" aria-labelledby="vids-h">
+  <h2 id="vids-h">Recent videos</h2>
+  <div class="grid grid-2">
+  {%- for v in site.data.videos %}
+    <article class="card">
+      <div class="embed" data-embed data-src="https://www.youtube-nocookie.com/embed/{{ v.youtube_id }}" data-title="{{ v.title | escape }}">
+        <div class="embed-facade">
+          <button class="btn btn-primary" type="button" data-embed-load>{% include icon.html name="youtube" %} Play “{{ v.title }}”</button>
+        </div>
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v={{ v.youtube_id }}">{{ v.title }}</a></h3>
+      {% if v.date %}<p class="meta">{{ v.date | date: "%-d %B %Y" }}</p>{% endif %}
+      {% if v.description %}<p>{{ v.description }}</p>{% endif %}
+    </article>
+  {%- endfor %}
+  </div>
+</section>
+{% endif %}

@@ -1,0 +1,10 @@
+<article class="card game-card">
+  <a class="thumb" href="{{ include.game.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ include.game.cover | relative_url }}" alt="" loading="lazy" decoding="async" width="630" height="500">
+  </a>
+  <div class="card-body">
+    <p class="meta">{{ include.game.kind }} &middot; {{ include.game.status }}</p>
+    <h3><a href="{{ include.game.url | relative_url }}">{{ include.game.title }}</a></h3>
+    <p>{{ include.game.summary }}</p>
+  </div>
+</article>
