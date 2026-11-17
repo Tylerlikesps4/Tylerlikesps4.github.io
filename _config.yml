@@ -43,7 +43,7 @@ defaults:
   - scope: { path: "", type: posts }
     values: { layout: post }
   - scope: { path: "", type: games }
-    values: { layout: game }
+    values: { layout: game, seo: { type: VideoGame } }
   - scope: { path: "" }
     values: { layout: page }
 

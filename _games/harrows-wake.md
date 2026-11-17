@@ -1,5 +1,6 @@
 ---
 title: "Harrow's Wake"
+date: 2026-11-07
 order: 1
 featured: true
 kind: PS1-style survival horror

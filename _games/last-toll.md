@@ -1,5 +1,6 @@
 ---
 title: "Harrow's Wake: Last Toll"
+date: 2026-11-09
 order: 2
 kind: First-person horror · jam game
 status: Jam build
