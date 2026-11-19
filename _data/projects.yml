@@ -1,5 +1,20 @@
 # Apps & tools shown on the Apps page (games live in the _games folder instead).
 # status: shown as a badge. repo/download/site are optional; leave them out to hide the button.
+- name: Merlin Command
+  slug: merlin-command
+  status: Coming soon
+  kind: Android & Windows app
+  summary: >-
+    An all-in-one AI command center for my channels and the Merlin Direwolves studio:
+    five built-in agents (Chief of Staff, Studio Crew, Ops, Dev, Revenue), custom AI workers
+    you build yourself, and an approvals inbox so nothing is ever sent without a human yes.
+  details:
+    - Works with local models through Ollama or LM Studio, or cloud providers you choose.
+    - Sponsor pipeline, task list and a simple income and expense log.
+    - Tauri 2 (Rust + React), one codebase for Android and Windows.
+  license: GPL-3.0-or-later
+  note: In private testing. Not released yet.
+
 - name: Anu Studio Crew
   slug: studio-crew
   status: Coming soon

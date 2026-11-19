@@ -2,7 +2,6 @@
 title: "Building Studio Crew: AI helpers for my channels, running on my own PC"
 date: 2026-11-17 12:00:00 -0500
 tags: [studio-crew, ai, ollama, android]
-draft_by: Hark
 description: "Why I'm building Anu Studio Crew, an Android app with six AI helpers for YouTube and Twitch, and why it runs on Ollama on an RTX 4060."
 ---
 

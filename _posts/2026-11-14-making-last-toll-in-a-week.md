@@ -2,7 +2,6 @@
 title: "Making Last Toll in a week for a game jam"
 date: 2026-11-14 12:00:00 -0500
 tags: [last-toll, game-jam, godot, devlog]
-draft_by: Hark
 description: "A day-by-day look at making Harrow's Wake: Last Toll, a short first-person horror game, for Super Free AI Game Jam #2."
 image: /assets/img/last-toll/the-bellman.webp
 ---

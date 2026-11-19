@@ -2,7 +2,6 @@
 title: "Harrow's Wake: from a huge design doc to a small free demo"
 date: 2026-11-07 18:00:00 -0500
 tags: [harrows-wake, godot, devlog]
-draft_by: Hark
 description: "How Harrow's Wake went from a big PS1 survival horror design document to a free, open-source one-chapter demo in Godot 4.3."
 image: /assets/img/harrows-wake/bellman-mask.webp
 ---
